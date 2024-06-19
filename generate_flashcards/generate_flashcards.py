@@ -6,11 +6,6 @@ from dotenv import load_dotenv
 
 from openai import OpenAI
 
-# Load environment variables from .env file
-load_dotenv()
-
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
-
 
 class FlashcardGenerator:
     """
@@ -279,5 +274,12 @@ class FlashcardGenerator:
                 raise ValueError("The 'front' and 'back' keys must be strings.")
 
 
-if __name__ == "__main__":
+def main():
+    # Load environment variables from .env file
+    load_dotenv()
+
     fire.Fire(FlashcardGenerator)
+
+
+if __name__ == "__main__":
+    main()
