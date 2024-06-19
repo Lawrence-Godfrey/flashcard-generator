@@ -1,2 +1,4 @@
 .idea
 .env
+build
+flashcard_generator.egg-info
